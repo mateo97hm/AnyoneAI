@@ -20,8 +20,8 @@ SELECT
         )
     ) AS Delivery_Difference
 FROM
-    olist_orders_dataset o
-    JOIN olist_customers_dataset c ON o.customer_id = c.customer_id
+    olist_orders o
+    JOIN olist_customers c ON o.customer_id = c.customer_id
 WHERE
     o.order_status = 'delivered'
     AND o.order_delivered_customer_date IS NOT NULL
